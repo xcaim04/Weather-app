@@ -4,7 +4,8 @@ import WeatherCard from "./components/WeatherCard";
 import getWeatherData from "./services/weatherServices";
 import { weatherData } from "./types/weatherData";
 import { NotFound } from "./components/NotFound";
-import { getWeatherImage } from "./types/weatherImages";
+
+import Hello from "./components/Hello";
 
 const App: React.FC = () => {
     const [weatherData, setWeatherData] = useState<weatherData | null>(null);
@@ -15,17 +16,12 @@ const App: React.FC = () => {
         if (data) {
             setWeatherData(data);
             setDataFound(true);
+            console.log("Found it");
         } else {
             setWeatherData(null);
             setDataFound(false);
         }
     };
-
-    let path = "../publi/icon.svg";
-
-    if (weatherData != null) {
-        path = getWeatherImage(weatherData.description);
-    }
 
     return (
         <>
@@ -34,12 +30,17 @@ const App: React.FC = () => {
             <div className="card">
                 <div className="container-styles">
                     {dataFound ? (
-                        weatherData && <WeatherCard weatherData={weatherData} />
+                        weatherData != null ? (
+                            weatherData && (
+                                <WeatherCard weatherData={weatherData} />
+                            )
+                        ) : (
+                            <Hello />
+                        )
                     ) : (
-                        <NotFound location={weatherData!.location} />
+                        <NotFound />
                     )}
                 </div>
-                <img src={path} alt="weather" />
             </div>
         </>
     );

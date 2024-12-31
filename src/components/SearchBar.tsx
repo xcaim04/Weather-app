@@ -11,7 +11,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Started Search");
+        console.log("Searching...");
         onSearch(location);
     };
 
@@ -25,7 +25,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 className="input"
             />
             <button type="submit" className="search">
-                <FontAwesomeIcon icon={faSearch} size="1x"></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faSearch} size="1x" />
             </button>
         </form>
     );

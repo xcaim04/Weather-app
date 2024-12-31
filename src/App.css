@@ -121,6 +121,8 @@ input {
 
 .search:hover {
     cursor: pointer;
+    background-color: #add8e6;
+    transition: ease-in-out .2s;
 }
 
 
@@ -170,7 +172,7 @@ section {
     width: 30px;
 }
 
-.not-found {
+.split-card {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
