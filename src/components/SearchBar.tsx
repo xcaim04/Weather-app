@@ -23,6 +23,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 onChange={(e) => setLocation(e.target.value)}
                 placeholder="Enter location"
                 className="input"
+                required
             />
             <button type="submit" className="search">
                 <FontAwesomeIcon icon={faSearch} size="1x" />
