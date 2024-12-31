@@ -1,7 +1,7 @@
 export const NotFound = () => {
     return (
         <div className="weather-card split-card">
-            <div className="not-found-text">
+            <div className="split-text">
                 <h1 className="location">Sorry...</h1>
                 <h4>404 Not Found</h4>
             </div>

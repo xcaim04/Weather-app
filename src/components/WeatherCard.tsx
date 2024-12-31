@@ -35,7 +35,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData }) => {
 
     return (
         <div className="weather-card split-card">
-            <div className="details">
+            <div className="details split-text">
                 <div>
                     <h1 className="location">
                         <span>
