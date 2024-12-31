@@ -7,7 +7,7 @@ export const NotFound = () => {
             </div>
 
             <div>
-                <img src="../public/rain.svg" alt="rain.svg" />
+                <img src="rain.svg" alt="rain.svg" />
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ function Hello() {
                 <h1 className="location">Hello, Welcome</h1>
                 <h4>I'm ready to find out your weather</h4>
             </div>
-            <img src="../public/icon.svg" />
+            <img src="icon.svg" />
         </div>
     );
 }
